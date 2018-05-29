@@ -1,0 +1,35 @@
+@import "element/color";
+
+.bg {
+  &-mine_shaft {
+    background-color: $mine_shaft;
+  }
+
+  &-gray_nurse {
+    background-color: $gray_nurse;
+  }
+  
+  &-pizazz {
+    background-color: $pizazz;
+  }
+
+  &-atlantis {
+    background-color: $atlantis;
+  }
+
+  &-mojo {
+    background-color: $mojo;
+  }
+
+  &-amber {
+    background-color: $amber;
+  }
+
+  &-jungle_green {
+    background-color: $jungle_green;
+  }
+
+  &-azure_radiance {
+    background-color: $azure_radiance;
+  }
+}

@@ -1,0 +1,45 @@
+@import "element/color";
+
+// Font awesome
+@import url("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
+
+// Font weights
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i');
+
+// Headings
+h1 {
+  color:       $black;
+  font-size:   3em;
+  font-weight: normal;
+}
+
+h2 {
+  color:       $oslo_gray;
+  font-size:   2.25em;
+  font-weight: normal;
+}
+
+h3 {
+  color:       $black;
+  font-size:   1.75em;
+  font-weight: normal;
+}
+
+h4 {
+  color:       $oslo_gray;
+  font-size:   1.125em;
+  font-weight: normal;
+}
+
+h5 {
+  color:       $black;
+  font-size:   0.75em;
+  font-weight: normal;
+}
+
+p {
+  color:       $oslo_gray;
+  font-size:   1em;
+  font-weight: normal;
+}

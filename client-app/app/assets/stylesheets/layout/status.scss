@@ -1,0 +1,13 @@
+@import "element/color";
+
+body {
+  background-color: darken($gray_nurse, 5%);
+}
+
+.box {
+  & > .box-body {
+    & > p {
+      text-align: center;
+    }
+  }
+}

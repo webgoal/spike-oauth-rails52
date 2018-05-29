@@ -1,0 +1,88 @@
+@import "element/color";
+
+body {
+  background-color: darken($gray_nurse, 5%);
+}
+
+.group {
+  margin:   0 0 45px 0;
+  position: relative;
+
+  & > input {
+    background-color: darken($white, 2%);
+    border:           none;
+    border-bottom:    1px solid $oslo_gray;
+    color:            $mine_shaft;
+    display:          block;
+    font-family:      "Lato";
+    padding:          5px;
+    font-size:        1rem;
+    width:            100%;
+
+    &:focus,
+    &:valid {
+      outline:  none;
+
+      & ~ label {
+        color:      $mojo;
+        font-size:  14px;
+        top:        -20px;
+      }
+
+      & ~ .bar:before,
+      & ~ .bar:after {
+        width: 50%;
+      }
+    }
+  }
+
+  & > label {
+    color:              $oslo_gray;
+    font-weight:        normal;
+    font-size:          14px;
+    left:               5px;
+    pointer-events:     none;
+    position:           absolute;
+    transition:         0.2s ease all;
+    -moz-transition:    0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    top:                10px;
+  }
+}
+
+.bar {
+  display:  block;
+  position: relative;
+  width:    100%;
+
+  &:before,
+  &:after {
+    background:         $mojo;
+    bottom:             0;
+    content:            "";
+    height:             2px;
+    position:           absolute;
+    transition:         0.2s ease all;
+    -moz-transition:    0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    width:              0;
+  }
+
+  &:before {
+    left: 50%;
+  }
+
+  &:after {
+    right: 50%
+  }
+}
+
+.highlight {
+  height:         60%;
+  left:           0;
+  opacity:        0.5;
+  pointer-events: none;
+  position:       absolute;
+  top:            25%;
+  width:          100%;
+}

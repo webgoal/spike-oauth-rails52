@@ -1,0 +1,221 @@
+@import "element/color";
+
+.toast-title {
+  font-weight: bold;
+}
+
+.toast-message {
+  margin:         0 0 0 20px;
+  position:       absolute;
+  transform:      translate(0, -50%);
+  top:            50%;
+  word-wrap:      break-word;
+  -ms-word-wrap:  break-word;
+
+  & a,
+  & label {
+    color: $white;
+  }
+}
+
+.toast-close-button {
+  color:                $white;
+  float:                right;
+  filter:               alpha(opacity=80);
+  -ms-filter:           progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  font-size:            20px;
+  font-weight:          bold;
+  opacity:              0.8;
+  position:             relative;
+  right:                -0.3em;
+  text-shadow:          0 1px 0 $white;
+  -webkit-text-shadow:  0 1px 0 $white;
+  top:                  -0.3em;
+
+  &:hover,
+  &:focus {
+    cursor:           pointer;
+    color:            $black;
+    filter:           alpha(opacity=40);
+    -ms-filter:       progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity:          0.4;
+    text-decoration:  none;
+  }
+}
+
+button.toast-close-button {
+  background:         transparent;
+  border:             0;
+  cursor:             pointer;
+  padding:            0;
+  -webkit-appearance: none;
+}
+
+.toast-top-center,
+.toast-top-full-width {
+  right:  0;
+  top:    0;
+  width:  100%;
+}
+
+.toast-bottom-center,
+.toast-bottom-full-width {
+  bottom: 0;
+  right:  0;
+  width:  100%;
+}
+
+.toast-top-left {
+  left: 12px;
+  top:  12px;
+}
+
+.toast-top-right {
+  right:  12px;
+  top:    12px;
+}
+
+.toast-bottom-right {
+  bottom: 12px;
+  right:  12px;
+}
+
+.toast-bottom-left {
+  bottom: 12px;
+  left:   12px;
+}
+
+#toast-container {
+  position: fixed;
+  z-index:  999998;
+
+  & * {
+    box-sizing:         border-box;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  & > div {
+    background-position:    15px center;
+    background-repeat:      no-repeat;
+    border-radius:          3px;
+    -moz-border-radius:     3px;
+    -webkit-border-radius:  3px;
+    box-shadow:             0 0 12px lightgray;
+    -moz-box-shadow:        0 0 12px lightgray;
+    -webkit-box-shadow:     0 0 12px lightgray;
+    color:                  $white;
+    filter:                 alpha(opacity=100);
+    -ms-filter:             progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    height:                 60px;
+    margin:                 0 0 6px;
+    opacity:                1;
+    overflow:               hidden;
+    padding:                15px 15px 15px 50px;
+    position:               relative;
+    width:                  50vw;
+
+    &:hover {
+      box-shadow:         0 0 12px $black;
+      -moz-box-shadow:    0 0 12px $black;
+      -webkit-box-shadow: 0 0 12px $black;
+      cursor:             pointer;
+      filter:             alpha(opacity=100);
+      -ms-filter:         progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+      opacity:            1;
+    }
+  }
+
+  & > .toast {
+    &::before {
+      color:        $white;
+      float:        left;
+      font-family:  "Font Awesome 5 Free";
+      font-size:    24px;
+      font-weight:  900;
+      margin:       0 0.5em 0 -1em;
+      position:     absolute;
+      transform:    translate(0, -50%);
+      top:          50%;
+    }
+
+    &-info::before {
+      content: "\f129";
+    }
+
+    &-error::before {
+      content: "\f05e";
+    }
+
+    &-success::before {
+      content: "\f00c";
+    }
+
+    &-warning::before {
+      content: "\f071";
+    }
+  }
+}
+
+#toast-container.toast-top-center    > div,
+#toast-container.toast-bottom-center > div {
+  margin: 0 auto;
+  width:  300px;
+}
+
+#toast-container.toast-top-full-width    > div,
+#toast-container.toast-bottom-full-width > div {
+  margin: 0 auto;
+  width:  96%;
+}
+
+.toast {
+  background-color: $mine_shaft;
+
+  &-success { background-color: $toastr-success; }
+  &-error   { background-color: $toastr-error; }
+  &-info    { background-color: $toastr-info; }
+  &-warning { background-color: $toastr-warning; }
+}
+
+.toast-progress {
+  background-color: $black;
+  bottom:           0;
+  filter:           alpha(opacity=40);
+  -ms-filter:       progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  height:           4px;
+  left:             0;
+  opacity:          0.4;
+  position:         absolute;
+}
+
+@media all and (max-width: 240px) {
+  #toast-container > div {
+    padding:  8px 8px 8px 50px;
+    width:    11em;
+  }
+
+  #toast-container .toast-close-button {
+    right:  -0.2em;
+    top:    -0.2em;
+  }
+}
+
+@media all and (min-width: 241px) and (max-width: 480px) {
+  #toast-container > div {
+    padding:  8px 8px 8px 50px;
+    width:    18em;
+  }
+
+  #toast-container .toast-close-button {
+    right:  -0.2em;
+    top:    -0.2em;
+  }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+  #toast-container > div {
+    padding:  15px 15px 15px 50px;
+    width:    25em;
+  }
+}

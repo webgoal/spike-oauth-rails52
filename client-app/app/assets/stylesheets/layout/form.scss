@@ -1,0 +1,75 @@
+@import "element/color";
+
+.container-form {
+  align-items:      center;
+  display:          flex;
+  display:          -moz-box;
+  display:          -ms-flexbox;
+  display:          -webkit-box;
+  display:          -webkit-flex;
+  flex-wrap:        wrap;
+  justify-content:  center;
+  min-height:       100vh;
+  padding:          25px;
+  width:            100vw;
+}
+
+.box {
+  background:     darken($white, 2%);
+  border-radius:  3px;
+  border-top:     3px solid $mine_shaft;
+  box-shadow:     0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  padding:        55px;
+  overflow:       hidden;
+  width:          425px;
+
+  &.box-pizazz {
+    border-top-color: $pizazz;
+  }
+
+  &.box-atlantis {
+    border-top-color: $atlantis;
+  }
+
+  &.box-mojo {
+    border-top-color: $mojo;
+  }
+
+  &.box-amber {
+    border-top-color: $amber;
+  }
+
+  &.box-jungle_green {
+    border-top-color: $jungle_green;
+  }
+
+  &.box-azure_radiance {
+    border-top-color: $azure_radiance;
+  }
+
+  .box-header {
+    & > label {
+      color:          $mine_shaft;
+      display:        block;
+      font-family:    "Lato";
+      font-size:      30px;
+      line-height:    1.2;
+      margin:         0 auto;
+      padding:        0 0 25px 0;
+      text-align:     center;
+    }
+
+    & > img {
+      border-radius:  50%;
+      display:        block;
+      height:         80px;
+      margin:         0 auto 50px auto;
+      opacity:        0.75;
+      width:          auto;
+    }
+  }
+
+  .box-button {
+    margin: 35px 0 0 0;
+  }
+}

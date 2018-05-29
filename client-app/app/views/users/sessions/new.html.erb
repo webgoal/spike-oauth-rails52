@@ -1,0 +1,35 @@
+<%= stylesheet_link_tag "layout/form",  media: "all" %>
+<%= stylesheet_link_tag "layout/login", media: "all" %>
+
+<div class="container-form">
+  <div class="box box-mojo">
+    <div class="box-header">
+      <label><strong>Bem-vindo</strong></label>
+      <%= image_tag("logo/logo-webgoal.png", alt: "Accounts", class: "responsive" ) %>
+    </div>
+
+    <div class="box-body">
+      <%= form_for(:user, url: session_path(:user)) do |f| %>
+        <div class="group">
+          <input class="string email optional" type="text" name="user[email]" id="user_email" autofocus="autofocus" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>E-mail</label>
+        </div>
+
+        <div class="group">
+          <input class="password optional" type="password" name="user[password]" id="user_password" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Senha</label>
+        </div>
+
+        <div class="box-button">
+          <%= button_tag :submit, class: "btn-webgoal btn-mojo btn-block", data: { disable_with: "Entrando..." } do %>
+            <i class="fas fa-sign-in-alt fa-fw"></i> Entrar
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

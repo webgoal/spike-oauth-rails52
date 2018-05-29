@@ -1,0 +1,24 @@
+@import "element/color";
+
+label {
+  color:        $mine_shaft;
+  font-size:    16px;
+  font-family:  "Lato", sans-serif;
+  font-weight:  bold;
+
+  & abbr {
+    color:      $pizazz;
+    font-size:  10px;
+    margin:     0 0 0 5px;
+  }
+}
+
+span {
+  & label {
+    color:          $mine_shaft;
+    font-weight:    normal;
+    font-size:      14px;
+    margin:         0 1rem 0 1.5rem;
+    text-transform: uppercase;
+  }
+}

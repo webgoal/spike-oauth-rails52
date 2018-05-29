@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag "layout/form",   media: "all" %>
+<%= stylesheet_link_tag "layout/status", media: "all" %>
+
+<div class="container-form">
+  <div class="box box-mine_shaft">
+    <div class="box-header">
+      <label><strong>Client Home</strong></label>
+      <%= image_tag("logo/logo-webgoal.png", alt: "Accounts", class: "responsive" ) %>
+    </div>
+
+    <div class="box-body">
+      <p><%= current_user&.email %></p>
+
+      <div class="box-button">
+        <p><%= link_to "<i class='fas fa-sign-in-alt fa-fw'></i> Servidor".html_safe, user_webgoal_omniauth_authorize_path, class: "btn-webgoal btn-atlantis", data: { disable_with: "Entrando..." } %></p>
+        <p><%= link_to "<i class='fas fa-sign-in-alt fa-fw'></i> Local".html_safe,    new_user_session_path,                class: "btn-webgoal btn-mojo",     data: { disable_with: "Entrando..." } %></p>
+        <p><%= link_to "<i class='fas fa-sign-out-alt fa-fw'></i> Sair".html_safe,    logout_path,                          class: "btn-webgoal btn-pizazz",   data: { disable_with: "Saindo..." } %></p>
+      </div>
+    </div>
+  </div>
+</div>

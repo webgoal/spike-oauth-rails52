@@ -1,0 +1,30 @@
+version: '3'
+
+volumes:
+  gems-accounts:
+  gems-client:
+
+services:
+  accounts:
+    image: webgoal/generic_ror:latest
+    environment:
+      TZ: 'America/Sao_Paulo'
+    ports:
+      - "3001:3001"
+    volumes:
+      - gems-accounts:/usr/local/bundle
+      - ./accounts-app:/usr/src/app
+    command: bash -c "rm -f tmp/pids/server.pid && rails s -p 3001 -b '0.0.0.0'"
+
+  client:
+    image: webgoal/generic_ror:latest
+    environment:
+      DOORKEEPER_APP_ID: "b653e9f08e5d6c3506152f669c08b9785a826e30cc51f571a0ee66bfc6b5ff7d"
+      DOORKEEPER_APP_SECRET: "3bf223dcfb6193db68d6b312257968bf4c3650820ec600a1c6014ceb230153e6"
+      TZ: 'America/Sao_Paulo'
+    ports:
+      - "3002:3002"
+    volumes:
+      - gems-accounts:/usr/local/bundle
+      - ./client-app:/usr/src/app
+    command: bash -c "rm -f tmp/pids/server.pid && rails s -p 3002 -b '0.0.0.0'"

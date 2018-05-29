@@ -1,0 +1,90 @@
+@import "element/color";
+
+.btn-webgoal {
+  border:             none;
+  border-radius:      1.875em;
+  box-shadow:         .5em .5em 1em lightgray;
+  -moz-box-shadow:    .5em .5em 1em lightgray;
+  -webkit-box-shadow: .5em .5em 1em lightgray;
+  color:              $white;
+  cursor:             pointer;
+  display:            block;
+  font-family:        "Lato", sans-serif;
+  font-size:          0.875em;
+  font-weight:        bold;
+  letter-spacing:     0.0625em;
+  padding:            1em;
+  text-align:         center;
+  text-transform:     uppercase;
+
+  &.center-block {
+    margin: 0 auto;
+  }
+
+  &:hover {
+    color:            $white;
+    text-decoration:  none;
+  }
+
+  &.btn-group {
+    padding:  0 25px;
+    width:    auto;
+  }
+
+  &.btn-atlantis {
+    background-color: $btn-atlantis;
+
+    &:hover     { background-color: $btn-atlantis-hover; }
+    &:active    { background-color: $btn-atlantis-active; }
+    &:disabled  { background-color: $btn-atlantis-disabled; }
+  }
+
+  &.btn-gray_nurse {
+    background-color: $btn-gray_nurse;
+    color:            $mine_shaft;
+
+    &:hover     { background-color: $btn-gray_nurse-hover }
+    &:active    { background-color: $btn-gray_nurse-active; }
+    &:disabled  { background-color: $btn-gray_nurse-disabled; }
+  }
+
+  &.btn-mojo {
+    background-color: $btn-mojo;
+
+    &:hover     { background-color: $btn-mojo-hover; }
+    &:active    { background-color: $btn-mojo-active; }
+    &:disabled  { background-color: $btn-mojo-disabled; }
+  }
+
+  &.btn-science_blue {
+    background-color: $btn-science_blue;
+
+    &:hover     { background-color: $btn-science_blue-hover; }
+    &:active    { background-color: $btn-science_blue-active; }
+    &:disabled  { background-color: $btn-science_blue-disabled; }
+  }
+
+  &.btn-pizazz {
+    background-color: $btn-pizazz;
+
+    &:hover     { background-color: $btn-pizazz-hover; }
+    &:active    { background-color: $btn-pizazz-active; }
+    &:disabled  { background-color: $btn-pizazz-disabled; }
+  }
+
+  &.btn-dove_gray {
+    background-color: $btn-dove_gray;
+
+    &:hover     { background-color: $btn-dove_gray-hover; }
+    &:active    { background-color: $btn-dove_gray-active; }
+    &:disabled  { background-color: $btn-dove_gray-disabled; }
+  }
+
+  &.btn-astral {
+    background-color: $btn-astral;
+
+    &:hover     { background-color: $btn-astral-hover; }
+    &:active    { background-color: $btn-astral-active; }
+    &:disabled  { background-color: $btn-astral-disabled; }
+  }
+}
